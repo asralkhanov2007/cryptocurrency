@@ -97,7 +97,7 @@
     <!-- End .section-navbars  -->
     <div class="main">
       <div class="section section-tabs">
-        <div class="container">
+        <div class="container"
           <div class="row">
             <div class="col-md-12 mr-auto col-xl-12 mr-auto col-sm-12 mr-auto">
               <div class="card card-lg border border-primary" style="border-radius:20px;">
@@ -123,8 +123,10 @@
                                 <option class="text-success font-weight-bold">fhjtjdt</option>
                                 <option class="text-success font-weight-bold">asfsfasfas</option>
                               </select>
-                              </div>
-                              
+                            </div>
+                            <div class="col-sm-4 col-md-4 ">
+                              <!--<img style="float:left;" class="" align="center" src="/static/assets/img/exchange.png" alt="Card image"> -->
+                            </div>
                             </div> 
                             <div class="col-sm-12 col-md-6 col-xl6 mr-auto">
                               <input type="number" class="form-control form-control-lg" id="formGroupExampleInput" placeholder="ВАША СУММА">
@@ -140,7 +142,7 @@
                                 </select>
                                 </div>
                             </div>
-                  
+                            
                             <div class="col-sm-12 col-md-12 col-xl-12">
                               <button align="center" type="button" class="col-sm-12 col-md-12 col-xl-12 mr-auto btn btn-primary" data-toggle="modal" data-target="#exampleModal3">
                                <b>Обменять</b>
@@ -188,6 +190,7 @@
           </div>
         </div>
       </div>
+      
 
       <div class="section section-nucleo-icons">
         <img src="/static/assets/img/path3.png" class="path">
@@ -199,30 +202,16 @@
           </div>
           <!-- Types of crypto -->
           <div class="row">
+          {% for crypto in cryptos %}
           <div class="col-sm-12 col-md-4 col-xl-4 mr-auto">
             <div class="card" style="width:100%;">
-                <img class="card-img-top border border-primary rounded-circle" align="center" src="/static/assets/img/exchange.png" alt="Card image">
+                <img class="card-img-top border border-primary rounded-circle" align="center" src="{{crypto.image.url}}" alt="Card image">
                 <div class="card-body">
-                  <h1 class="card-text font-weight-bold  " align="center">Bitcoin<h1>
+                  <h1 class="card-text font-weight-bold  " align="center">{{crypto.name}}<h1>
               </div>
             </div>
           </div>
-          <div class="col-sm-12 col-md-4 col-xl-4 mr-auto">
-            <div class="card" style="width:100%;">
-              <img class="card-img-top border border-primary rounded-circle" align="center" src="/static/assets/img/exchange.png" alt="Card image">
-              <div class="card-body">
-                <h1 class="card-text font-weight-bold  " align="center">Bitcoin<h1>
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-12 col-md-4 col-xl-4 mr-auto">
-              <div class="card" style="width:100%;">
-                <img class="card-img-top border border-primary rounded-circle" align="center" src="/static/assets/img/exchange.png" alt="Card image">
-                <div class="card-body">
-                  <h1 class="card-text font-weight-bold  " align="center">Bitcoin<h1>
-                  </div>
-                </div>
-              </div>
+          {% endfor %}
               <!-- End of the type of crypto -->
           </div>
         </div>
@@ -238,22 +227,22 @@
             <ul class="nav">
               <li class="nav-item">
                 <a href="./index.html" class="nav-link">
-                  Home
+                 
                 </a>
               </li>
               <li class="nav-item">
                 <a href="./examples/landing-page.html" class="nav-link">
-                  Landing
+                 
                 </a>
               </li>
               <li class="nav-item">
                 <a href="./examples/register-page.html" class="nav-link">
-                  Register
+                 
                 </a>
               </li>
               <li class="nav-item">
                 <a href="./examples/profile-page.html" class="nav-link">
-                  Profile
+                 
                 </a>
               </li>
             </ul>
@@ -262,22 +251,22 @@
             <ul class="nav">
               <li class="nav-item">
                 <a href="https://creative-tim.com/contact-us" class="nav-link">
-                  Contact Us
+                 
                 </a>
               </li>
               <li class="nav-item">
                 <a href="https://creative-tim.com/about-us" class="nav-link">
-                  About Us
+                 
                 </a>
               </li>
               <li class="nav-item">
                 <a href="https://creative-tim.com/blog" class="nav-link">
-                  Blog
+                 
                 </a>
               </li>
               <li class="nav-item">
                 <a href="https://opensource.org/licenses/MIT" class="nav-link">
-                  License
+                  
                 </a>
               </li>
             </ul>
