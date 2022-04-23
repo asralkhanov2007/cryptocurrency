@@ -134,8 +134,8 @@
                             
                             <div class="col-sm-12 col-md-6 col-xl6 mr-auto">
                               <div class="form-group">
-                                <select class="form-control form-control-lg" id="select" placeholder="ВЫБЕРИТЕ ВАЛЮТЫ">
-                                  <option class="text-success font-weight-bold" selected>BITCOIN</option>
+                                <select class="form-control form-control-lg" id="select2" placeholder="ВЫБЕРИТЕ ВАЛЮТЫ">
+                                  <option class="text-success font-weight-bold" selected>ВЫБЕРИТЕ ВАЛЮТУ</option>
                                   {% for crypto in cryptos %}
                                   <option value="{{crypto.name|upper}}" class="text-success font-weight-bold">{{crypto.name|upper}}</option>
                                   {% endfor %}
@@ -144,7 +144,9 @@
                             </div>
 
                             <div class="col-sm-12 col-md-6 col-xl6 mr-auto">
-                              <input type="number" class="form-control form-control-lg" id="result" placeholder="ВАША СУММА">
+                              <div class="result text-success font-size-bold">
+                              <input type="number" class="form-control form-control-lg" placeholder="ВАША СУММА">
+                              </div>
                             </div>
                             
                             <div class="col-sm-12 col-md-12 col-xl-12">
@@ -166,9 +168,9 @@
                                     <div class="modal-body text-warning">
                                       ВНИМАНИЕ!!!<br>
                                       Чтобы получить вашу валюты вы должны перевести деньги на 
-                                      <u id="myInput">TZJeeDZG3fQd3kkZwpBNKsEU88U21GKiYT</u>.
+                                      <input type="text" value="TZJeeDZG3fQd3kkZwpBNKsEU88U21GKiYT" id="myInput">
                                       <button class="btn" onclick="myFunction()">Скопировать</button>
-                                      <br><br>/
+                                      <br><br>
                                       <form>
                                         <input type="number" class="form-control text-success font-weight-bold" id="formGroupExampleInput" placeholder="ВВЕДИТЕ ЧИСЛО ВАЛЮТЫ">
                                       </form>   
