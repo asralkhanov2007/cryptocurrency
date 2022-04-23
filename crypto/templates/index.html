@@ -118,10 +118,9 @@
                             <div class="form-group">
                               <select class="form-control form-control-lg" id="" placeholder="ВЫБЕРИТЕ ВАЛЮТЫ">
                                 <option class="text-success font-weight-bold" selected>ВЫБЕРИТЕ ВАЛЮТУ</option>
-                                <option class="text-success font-weight-bold">IJioj</option>
-                                <option class="text-success font-weight-bold">asfasfasn</option>
-                                <option class="text-success font-weight-bold">fhjtjdt</option>
-                                <option class="text-success font-weight-bold">asfsfasfas</option>
+                                {% for crypto in cryptos %}
+                                <option class="text-success font-weight-bold">{{crypto.name|upper}}</option>
+                                {% endfor %}
                               </select>
                             </div>
                             <div class="col-sm-4 col-md-4 ">
@@ -135,10 +134,9 @@
                               <div class="form-group">
                                 <select class="form-control form-control-lg" id="" placeholder="ВЫБЕРИТЕ ВАЛЮТЫ">
                                   <option class="text-success font-weight-bold" selected>ВЫБЕРИТЕ ВАЛЮТУ</option>
-                                  <option class="text-success font-weight-bold">IJioj</option>
-                                  <option class="text-success font-weight-bold">asfasfasn</option>
-                                  <option class="text-success font-weight-bold">fhjtjdt</option>
-                                  <option class="text-success font-weight-bold">asfsfasfas</option>
+                                  {% for crypto in cryptos %}
+                                  <option class="text-success font-weight-bold">{{crypto.name|upper}}</option>
+                                  {% endfor %}
                                 </select>
                                 </div>
                             </div>
