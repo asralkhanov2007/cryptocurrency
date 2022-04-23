@@ -34,3 +34,4 @@ select.oninput = function(){
 //     result.value = (parseFloat(input.value) / rates[select.value].Value).toFixed(2);
 
 // }
+
