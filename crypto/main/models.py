@@ -1,3 +1,5 @@
+from locale import currency
+from statistics import mode
 from tabnanny import verbose
 from django.db import models
 
@@ -15,3 +17,18 @@ class Crypto(models.Model):
     class Meta:
         verbose_name = 'Криптовалюта'
         verbose_name_plural = 'Криптовалюты'
+
+class CryptoValue(models.Model):
+    currency = models.ForeignKey(Crypto,on_delete=models.CASCADE,related_name='crypto_currency')
+    crypto_value = models.FloatField(default=0)
+
+    def __str__(self):
+        return f"{self.name}"
+
+class ExchangeCrypto(models.Model):
+    currencies = models.ManyToManyField(CryptoValue, related_name='crypto_exchange')
+    crypto_value = models.FloatField(default=0)
+
+    def __str__(self):
+        return f"{self.crypto_value}"
+
